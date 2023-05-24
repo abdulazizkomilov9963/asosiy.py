@@ -65,7 +65,7 @@ async def handle_new_member_added(message: types.Message):
 
 #xatni tekshirib o'chiruvchi start
 
-@dispatcher.message_handler(content_types=[types.ContentType.PHOTO, types.ContentType.TEXT,types.ContentType.all()])
+@dispatcher.message_handler(content_types=types.ContentType.all())
 async def taqiqlovchi(message:types.Message):
     if message.chat.id==chat_id:
         count = qushganlar.get(message.from_user.id)
