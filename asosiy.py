@@ -102,7 +102,7 @@ async def taqiqlovchi(message:types.Message):
                 familiyasi = message.from_user.last_name
             xat = await message.reply(
                 f"Aziz {ismi} {familiyasi} siz guruhimizga {count} ta a'zo qo'shib\nrivojlanishiga hissa qo'shdingiz.\nSizga katta raxmat\nE'LONIGIZ BUTUNLAY QOLADI!!!")
-            del qushganlar[message.from_user.id]
+            await del qushganlar[message.from_user.id]
             await asyncio.sleep(30)
             await xat.delete()
     else:
